@@ -1,9 +1,10 @@
-from configuration import Configuration
+from configurations import Configuration
 import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class Base(Configuration):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     SECRET_KEY = '747jak9djw3f8_u4!1khf#vt5_(f5uv#3df6&v(ct=0k%b&^8u'
 
     ALLOWED_HOSTS = []
@@ -62,17 +63,11 @@ class Base(Configuration):
         },
     ]
 
-
     LANGUAGE_CODE = 'en-us'
-
     TIME_ZONE = 'UTC'
-
     USE_I18N = True
-
     USE_L10N = True
-
     USE_TZ = True
-
     STATIC_URL = '/static/'
 
 
@@ -82,5 +77,17 @@ class Dev(Base):
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+class Docker(Base):
+    DEBUG = True
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'jakniedojade',
+            'HOST': 'db',
+            'USER': 'ania',
+            'PASSWORD': 'general_ania',
         }
     }

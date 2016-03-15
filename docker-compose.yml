@@ -2,6 +2,7 @@ db:
   image: postgres
   environment:
     POSTGRES_USER: ania
+    POSTGRES_DB: jakniedojade
     POSTGRES_PASSWORD: general_ania
 
 web:
