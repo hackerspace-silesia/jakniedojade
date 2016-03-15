@@ -1,0 +1,18 @@
+db:
+  image: postgres
+  environment:
+    POSTGRES_USER: ania
+    POSTGRES_PASSWORD: general_ania
+
+web:
+  build: .
+  command: python manage.py runserver 0.0.0.0:8000
+  volumes:
+    - ./jakniedojade/:/code/
+    - ./static/:/static/
+    - ./media/:/media/
+  ports:
+    - "8000:8000"
+  links:
+    - db
+
