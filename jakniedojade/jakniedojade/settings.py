@@ -70,6 +70,7 @@ class Base(Configuration):
     USE_L10N = True
     USE_TZ = True
     STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
 
 
 class Dev(Base):
@@ -83,6 +84,7 @@ class Dev(Base):
 
 class Docker(Base):
     DEBUG = True
+    MEDIA_URL = '/media/'
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
