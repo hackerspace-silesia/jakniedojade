@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html >
+ <meta charset="UTF-8">
+<TITLE>Jak nie dojade</TITLE>
+
+<!podpięciejQuery >
+<script src="jquery.min.js"></script>
+
+<script src="main.js"></script>
+<!podpięciejQuery UI>
+
+<link href="jquery-ui-1.11.4.custom/jquery-ui.css"rel="stylesheet">
+<link href="modal.css"rel="stylesheet">
+
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script src="bootstrap.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="modal.js"></script>
+<style>
+	.kontener{
+		width:900px;
+		max-width:100%;
+		margin:0px auto;
+		-webkit-box-shadow: 0 0 0 1px #000000;
+		box-shadow:0 0 0 1px #000000;
+		-webkit-transition:all 500ms ease;
+		-moz-transition:all 500ms ease;
+		-ms-transition: all 500ms ease;
+		transition:all 500ms ease;
+	}
+	.box{
+		width:23%;
+		margin:1%;
+		background:#f0f0f0;
+		-webkit-box-shadow: 0 0 0 1px #000000;
+		box-shadow:0 0 0 1px #000000;
+		float:left;
+		-webkit-transition:all 500ms ease;
+		-moz-transition:all 500ms ease;
+		-ms-transition: all 500ms ease;
+		-o-transition: all 500ms ease;
+		transition:all 500ms ease;
+		display:table;
+	}
+	.box_vertical{
+		text-align:center;
+		display:table-cell;
+		vertical-align:middle;
+		padding:5px;
+		
+	}
+	/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+</style>
+
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <span class="close">×</span>
+		  <h2>Modal Header</h2>
+		</div>
+		<div class="modal-body">
+		  <p>Some text in the Modal Body</p>
+		  <p>Some other text...</p>
+		</div>
+		<div class="modal-footer">
+		  <h3>Modal Footer</h3>
+		</div>
+	  </div>
+
+	</div>
+	<div class="header"> Jak nie dojade <img src="https://i.ytimg.com/vi/hWR5zrji7LQ/maxresdefault.jpg" style="width:100%; height:200px;"></div>
+							
+			  
+	<div class="box">
+		<div id="box_vertical" class="box_vertical">
+			<img src="https://i.ytimg.com/vi/feh_U3kyFf8/hqdefault.jpg" style="width:100%;">
+			<button type="button" class="btn btn-primary btn-xs" >Ilość przesiadek</button>
+			<span>Glosy:<span class="number_of_voits">5</span>
+				
+		</div>
+	</div>
+	<div class="box">
+		<div class="box_vertical">
+			<img src="https://i.ytimg.com/vi/feh_U3kyFf8/hqdefault.jpg" style="width:100%;">
+			<button type="button" class="btn btn-primary btn-xs" >Ilość przesiadek</button>
+			<span>Glosy:<span class="number_of_voits">5</span>
+
+		</div>
+	</div>
+	<div class="box">
+		<div class="box_vertical">
+			<img src="https://i.ytimg.com/vi/feh_U3kyFf8/hqdefault.jpg" style="width:100%;">
+			<button type="button" class="btn btn-primary btn-xs" >Ilość przesiadek</button>
+			<span>Glosy:<span class="number_of_voits">5</span>
+
+		</div>
+	</div>
+	<div class="box">
+		<div class="box_vertical">
+			<img src="https://i.ytimg.com/vi/feh_U3kyFf8/hqdefault.jpg" style="width:100%;">
+			<button type="button" class="btn btn-primary btn-xs" >Ilość przesiadek</button>
+			<span>Glosy:<span class="number_of_voits">5</span>
+
+		</div>
+	</div>
+	<div class="box">
+		<div class="box_vertical">
+			<img src="https://i.ytimg.com/vi/feh_U3kyFf8/hqdefault.jpg" style="width:100%;">
+			<button type="button" class="btn btn-primary btn-xs" >Ilość przesiadek</button>
+			<span>Glosy:<span class="number_of_voits">5</span>
+
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
