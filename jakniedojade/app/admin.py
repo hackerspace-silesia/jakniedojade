@@ -57,4 +57,4 @@ class VoteAdmin(admin.ModelAdmin):
     list_display = (
         'id', 'ip', 'user_agent', 'last_modified', 'created'
     )
-    fields = ('name', 'image')
+    fields = ('name', 'ip', 'user_agent')
