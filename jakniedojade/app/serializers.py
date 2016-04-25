@@ -8,6 +8,6 @@ class ConnectionSerializer(ModelSerializer):
     class Meta:
         model = Connection
         fields = (
-            'image_url', 'name', 'description',
+            'id', 'image_url', 'name', 'description',
             'point_a', 'point_b', 'vote_count',
         )
