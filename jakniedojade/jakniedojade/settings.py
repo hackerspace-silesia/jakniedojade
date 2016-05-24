@@ -72,10 +72,14 @@ class Base(Configuration):
     USE_TZ = True
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
+    HTML_ROOT= '/'
 
 
 class Dev(Base):
     DEBUG = True
+    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+    HTML_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'html')
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -85,7 +89,9 @@ class Dev(Base):
 
 class Docker(Base):
     DEBUG = True
-    MEDIA_URL = '/media/'
+    MEDIA_ROOT = '/media'
+    STATIC_ROOT = '/media'
+    HTML_ROOT = '/html'
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
