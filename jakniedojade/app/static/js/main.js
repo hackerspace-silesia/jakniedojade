@@ -15,11 +15,11 @@ function createTasksFromJs(data){
 	  var json = $.parseJSON(data);
 						 $.each( json, function( index, value){
 							var square="<div class='col-lg-3 col-md-4 col-xs-6 thumb'>\
-										<div style='border=0px' class='thumbnail' data-map='"+value.direction+"' data-name='"+value.name+"' data-description='"+value.description+"' href='#'> \
+										<div style='border=0px' class='thumbnail' data-id='"+value.id+"' data-map='"+value.Iframe_url+"' data-name='"+value.name+"' data-description='"+value.description+"' href='#'> \
 											<img class='img-responsive' width='350' src="+value.image_url+" alt=''>\
 											<div class='VoteBar' >\
-												<img  class=' hand' style='vertical-align:middle float: left;' src='connects/lapka.png'>\
-												<span class='vote'>"+value.vote_count+"</span>\
+												<img  class=' hand' style='vertical-align:middle float: left;' src='/static/img/lapka.png'>\
+												<span id='"+value.id+"'class='vote'>"+value.vote_count+"</span>\
 											</div>\
 										</div>\
 									</div>";
@@ -40,20 +40,36 @@ function modalInfoAbout(){
     
 function voteListener(){
 	$(".VoteBar").click(function(){
+				var idImg=$(this).parent().data('id');
         $("#modalConfirm").modal();
 		var confirmButtons=" <button type='button' class='btn btn-secondary' data-dismiss='modal'>Nie</button>\
         <button type='button' id='voteForConfirm' class='btn btn-primary'>Tak</button>"
 		$('.modal-footer').html(confirmButtons);
 		$("#voteForConfirm").click(function(){
-			console.log('klik');
-				$('.modal-footer').html('');
-				$('.modal-title').html('Dziękujemy za zagłosowanie');
+				sendVote(idImg);
 				
-			
+				
 		});
 		
     });
     };
 
+function sendVote(id){
+	  $.ajax({
+            type:"POST",
+            url:"/api/connections/"+id+"/vote/", 
+                success:function(data) {
+                $('.modal-footer').html('');
+								$('.modal-title').html('Dziękujemy za zagłosowanie');
+								addVoteToHand(id);
+                },		
+        });						
+					     
+};
+function addVoteToHand(id){
+	var numberOfVote= $(id);
+  							var num = parseInt(numberOfVote.text());
+  							numberOfVote.text(num+1);
+};
 
 
