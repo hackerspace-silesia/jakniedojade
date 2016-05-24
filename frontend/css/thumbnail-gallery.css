@@ -3,23 +3,53 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+
 .img-responsive{ transition: all .2s ease-in-out; }
-.img-responsive:hover { transform: scale(1.1); }
+.img-responsive:hover { transform: scale(1.01); }
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
+@media (min-height: 992px)
+.modal-body {
+    max-height: 800px;
+}
+.modal
+{
+    width: 900px;
+    height: 900px; /* control height here */
+}
+.modal-dialog {
 
+  max-height: 80%;
+  overflow-y: auto;
+	height:800px;
+}
+#map{
+	display: block;
+    margin-left: auto;
+    margin-right: auto ;
+	margin-top:20px;
+	border:0; 
+	width:900px;
+}
 @keyframes kw_anim{
-  0%{transform:rotate(0deg);}
-  25% {transform:rotate(-30deg);}
-  75% { transform:rotate(30deg);}
-  100% {transform:rotate(0deg);}
+  0%{transform:rotate(270deg);}
+  25% {transform:rotate(300deg);}
+
+  75% { transform:rotate(330deg);}
+  100% {transform:rotate(360deg);}
     
   }
 .hand:hover{
-    animation: kw_anim 1s infinite;
+
+    animation: kw_anim ease-in-out 0.5s 1;
+	  animation-fill-mode: forwards; 
 }
+.hand{
+    transform: rotate(270deg);
+}
+
 @media screen and (max-width: 550px) {
    .VoteBar {
     padding-left: 40%;
