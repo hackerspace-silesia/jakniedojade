@@ -12,6 +12,7 @@ web:
     - ./jakniedojade/:/code/
     - ./static/:/static/
     - ./media/:/media/
+    - ./html/:/html/
   ports:
     - "8000:8000"
   links:
