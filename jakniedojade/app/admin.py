@@ -21,6 +21,7 @@ class ConnectionAdmin(admin.ModelAdmin):
         'id', 'name', 'show_image', 'short_description',
         'last_modified', 'created'
     )
+    list_display_links = ('id', 'name')
     fields = ('name', 'image', 'iframe_url', 'description')
 
     def short_description(self, obj):
@@ -41,6 +42,7 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = (
         'id', 'name', 'show_image', 'last_modified', 'created'
     )
+    list_display_links = ('id', 'name')
     fields = ('name', 'image')
 
     def show_image(self, obj):
@@ -53,6 +55,9 @@ class ImageAdmin(admin.ModelAdmin):
 @admin.register(models.Vote)
 class VoteAdmin(admin.ModelAdmin):
     list_display = (
-        'id', 'ip', 'user_agent', 'last_modified', 'created'
+        'id', 'ip', 'connection', 'user_agent' 
     )
-    fields = ('name', 'image')
+    list_display_links = ('id', 'ip')
+    fields = ('ip', 'connection', 'user_agent')
+    list_filter = ('connection',)
+
