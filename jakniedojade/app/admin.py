@@ -21,9 +21,7 @@ class ConnectionAdmin(admin.ModelAdmin):
         'id', 'name', 'show_image', 'short_description',
         'last_modified', 'created'
     )
-    fields = (
-        'name', 'image', 'iframe_url', 'description', 'point_a', 'point_b'
-    )
+    fields = ('name', 'image', 'iframe_url', 'description')
 
     def short_description(self, obj):
         return truncatechars(obj.description, 50)
