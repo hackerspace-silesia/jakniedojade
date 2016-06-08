@@ -9,6 +9,45 @@
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../img/gears.svg') 50% 50% no-repeat ;
+}
+.container{
+	
+	font-family:Source Sans Pro Black;
+	 line-height: 36px;
+	 font-size:15px;
+	  font-weight: bold;
+	  color: rgb(20,73,74);
+}
+#infoBlock{
+	  position:relative;
+	  float:left;
+	  clear:none;
+	  overflow:hidden;
+}
+#cloudInfo{
+	 position:relative;
+	  z-index:1;
+	
+}
+#info{
+ display:block;
+	  position:absolute;
+	  width:80%;
+	  top:20%;
+	  left:5px;
+	  z-index:2;
+	  text-align:center;
+
+}
+
 
 @media (min-height: 992px)
 .modal-body {
@@ -16,14 +55,14 @@ body {
 }
 .modal
 {
-    width: 900px;
-    height: 900px; /* control height here */
+    width: 90%;
+    height: 90%;
 }
 .modal-dialog {
 
   max-height: 80%;
   overflow-y: auto;
-	height:800px;
+	
 }
 #map{
 	display: block;
@@ -92,9 +131,7 @@ footer {
 	 display:inline-block;
 	 
 }
-#subHeader{
-	font-family:"Sans Pro Black";
-}
+
  #map {
         width: 300px;
         height: 300px;
