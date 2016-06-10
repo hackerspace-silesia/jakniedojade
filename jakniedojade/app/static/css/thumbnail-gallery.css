@@ -18,6 +18,12 @@ body {
 	z-index: 9999;
 	background: url('../img/gears.svg') 50% 50% no-repeat ;
 }
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+
+	height:200px;
+}
+
+
 .container{
 	
 	font-family:Source Sans Pro Black;
