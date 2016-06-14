@@ -38,7 +38,7 @@ function createTrackSquareFromJs(data){
 										data-description='"+value.description+"' href='#'> \
 										</div>\
 									</div>";
-							var pictogram="<img class='img-responsive' width='350' src='"+value.image_url+"'/>";
+							var pictogram="<img class='img-responsive'  src='"+value.image_url+"'/>";
 							var voteBar= "<div class='VoteBar' >\
 										<img  class=' hand' style='vertical-align:middle float: left;' src='static/img/lapka.png'>\
 										<span id='"+value.id+"'class='vote'>"+value.vote_count+"</span></div>";

@@ -18,9 +18,10 @@ body {
 	z-index: 9999;
 	background: url('../img/gears.svg') 50% 50% no-repeat ;
 }
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
 
-	height:200px;
+	max-height:200px;
+	max-width:300px;
 }
 
 
@@ -63,6 +64,14 @@ body {
 {
     width: 90%;
     height: 90%;
+ }
+
+.modal-header
+{
+	background: #FFCF40;
+	
+	border-radius: 10px;
+
 }
 .modal-dialog {
 
