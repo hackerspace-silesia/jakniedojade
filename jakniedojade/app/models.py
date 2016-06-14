@@ -21,7 +21,7 @@ class Image(Core):
 class Connection(Core):
     name = models.CharField(max_length=80)
     image = models.ForeignKey(Image, blank=True, null=True)
-    iframe_url = models.URLField(blank=True, null=True)
+    iframe_url = models.URLField(blank=True, null=True, max_length=1000)
     description = models.TextField(blank=True)
 
     def __str__(self):

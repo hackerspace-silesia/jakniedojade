@@ -70,9 +70,15 @@ body {
 {
 	background: #FFCF40;
 	
-	border-radius: 10px;
+	
 
 }
+.modal-content {
+border-style: solid;;
+border-color:#FFCF40;
+border-width:5px;
+}
+
 .modal-dialog {
 
   max-height: 80%;
