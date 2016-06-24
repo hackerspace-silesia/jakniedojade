@@ -94,6 +94,10 @@ connect: {
       },
   },
 
+   jshint: {
+    all: ['gruntFile.js', 'public/js/*.js']
+  }
+
 });
 
  grunt.registerTask('default', ['concurrent:server']);
@@ -107,5 +111,6 @@ connect: {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
 };
