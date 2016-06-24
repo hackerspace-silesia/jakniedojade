@@ -1,0 +1,34 @@
+
+[{
+        "id": 1,
+        "image_url": "../img/kafelka.png",
+        "name": "Spodek -> Lotnisko",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "iframe_url":"https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2503418.353352314!2d15.354827564882733!3d52.211690691649984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e1!4m5!1s0x4716ce2336a1ccd1%3A0xb9af2a350559fabb!2sKatowice!3m2!1d50.264891899999995!2d19.0237815!4m5!1s0x4701cd1a2d7e8dd5%3A0x6835c93c1ea25cd0!2sKoszalin!3m2!1d54.1943219!2d16.1714908!5e0!3m2!1spl!2spl!4v1464024073837",
+		"vote_count": 5
+		},
+		 {
+        "id": 2,
+        "image_url": "../img/kafelka.png",
+        "name": "Spodek -> tratat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "iframe_url": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2503418.353352314!2d15.354827564882733!3d52.211690691649984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e1!4m5!1s0x4716ce2336a1ccd1%3A0xb9af2a350559fabb!2sKatowice!3m2!1d50.264891899999995!2d19.0237815!4m5!1s0x4701cd1a2d7e8dd5%3A0x6835c93c1ea25cd0!2sKoszalin!3m2!1d54.1943219!2d16.1714908!5e0!3m2!1spl!2spl!4v1464024073837",
+        "vote_count": 1
+    },
+		 {
+        "id": 3,
+        "image_url": "../img/kafelka.png",
+        "name": "Spodek -> cos tam",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "iframe_url": null,
+        "vote_count": 7
+    },
+		 {
+        "id": 4,
+        "image_url": "../img/smieszny-marek.png",
+        "name": "Mareczek",
+        "description": "To jest Marek. Marek jest memem :)",
+		"iframe_url": null,
+        "vote_count": 1
+    }
+]
