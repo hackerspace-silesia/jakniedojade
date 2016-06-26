@@ -1,0 +1,22 @@
+<div class="row">
+<div class="col-lg-12" >
+                <h1 class="page-header" ></h1>
+            </div>
+			<div class='text-center col-lg-2 col-md-4 col-xs-5 thumb'>
+			<div>WYBIERZ SWOJĄ TRASĘ,<br>
+				JEŚLI PROBLEM CIĘ <br>
+				DOTYCZY
+			</div>
+			<img class="center-block" src="img/hand.png" width="110px"/> 
+				
+			</div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb track-imag" ng-repeat="track in tracks">
+             <img  class="img-responsive " ng-src="{{ track.image_url }}" ng-click="showModalInformation(track)">
+               <div class='VoteBar' >
+                  <img  class=' hand' style='vertical-align:middle float: left;' 
+                         src='img/lapka.png' 
+                         ng-click="showModalAccept(track.name,track.id)">
+                  <span> {{track.vote_count}} </span>
+               </div>
+</div>
+</div>

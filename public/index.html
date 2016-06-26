@@ -7,9 +7,10 @@
     <meta name="description" content="">
 
     <title>Jak nie dojadę</title>
-  
+<script src="http://localhost:35729/livereload.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/thumbnail-gallery.css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
 </head>
 
@@ -36,13 +37,28 @@
 						PUNKTU NA MAPIE <br>
 						WOJEWÓDZTWA ŚLĄSKIEGO ?  
     </div>
+          <div class="container" style="top:100px;">
+            <div ng-view></div>
+              
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer>
 
+        </footer>
+
+    </div>
+   <div ng-include="'views/modals.html'">
+</div>
 </body>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
    <script src="https://code.angularjs.org/1.5.6/angular-sanitize.min.js"></script>
    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
     <script src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
     <script src="https://code.angularjs.org/1.5.6/angular-animate.min.js"></script>
-    <script src="http://localhost:35729/livereload.js"></script>
+
+ <script src="js/app.js"></script>
+ <script src="js/Tracks.js"></script>
+ <script src="js/filters/trusted.js"></script>
  
 </html>
