@@ -66,10 +66,11 @@ connect: {
   },
   js: {
     files: ['public/js/*.js'],
+     tasks: [ 'jshint']
   },
   css: {
     files: ['public/css/*.css'],
-    tasks: []
+   
   }
 },
 
@@ -95,7 +96,7 @@ connect: {
   },
 
    jshint: {
-    all: ['gruntFile.js', 'public/js/*.js']
+    all: ['gruntFile.js', 'public/*/*.*']
   }
 
 });
