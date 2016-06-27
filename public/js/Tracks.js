@@ -15,13 +15,28 @@ angular.module('Tracks')
   		 		 {
 			      alert('Z powodu błędu nie można było załadować piktogramów');
 				});
-  		
-  	track.getActualTrack=function(){
-  		return actualTrack;
-  	}
-	track.sendVote = function()
+
+	track.sendVote = function(id)
 		{
-		      console.log('send'); 
+		   $http({
+				method: "POST",
+            	url:"/api/"+id, 
+				})
+  		 .success(function(data, status, headers, config) 
+			    {
+			    	return 'Dziękujemy za zagłosowanie';
+				})
+  		 .error(function(data, status, headers, config)
+  		 		 {
+  		 		 		if (status==409)
+						{
+							return 'Niestety nie możesz znowu głosować na tę trasę';	
+						}
+						else
+						{
+							return 'Niestety z powodu błędu nie możesz zagłosować';
+						}
+				}); 
       	};
 //modals------------------
     track.showModalInformation=function(trackObject)
@@ -31,6 +46,7 @@ angular.module('Tracks')
     	({
 			templateUrl: 'modalWithInformation.html',
 			controller: ModalInfoController,
+			scope:$scope.$new(true),
 			resolve: 
 			{
 				actualTrack: function () 
@@ -55,11 +71,12 @@ angular.module('Tracks')
 
       ModalInfoController['$inject'] = ['$scope', '$modalInstance', 'actualTrack','$sce'];
 
-     track.showModalAccept=function(trackName,trackId)
+   
+      	 track.showModalAccept=function(trackId)
     {
     	var dialog = $modal.open
     	({
-			templateUrl: 'voteConversation',
+			templateUrl: 'modalForVote.html',
 			controller: ModalAccept,
 			scope:$scope.$new(true),
 			resolve: 
@@ -74,12 +91,14 @@ angular.module('Tracks')
 	};
 	   var ModalAccept = function ($scope, $modalInstance,trackId, $sce) 
    		{
-          $scope.title ="Czy na pewno chcesz zagłosować? ";
+          $scope.title ="Czy na pewno chcesz głosować na tę trasę";
           $scope.showButtons=true;
           $scope.trackId = trackId;
           $scope.ok = function () 
-          {	$scope.title ='zalezy od zwrotu'
-              $scope.showButtons=false;
+          {	
+          		
+          		$scope.title =track.sendVote;
+              	$scope.showButtons=false;
 
           };
            $scope.cancel = function () {
@@ -88,6 +107,5 @@ angular.module('Tracks')
 
       };
 
-      ModalAccept['$inject'] = ['$scope', '$modalInstance', 'trackNameToVote','trackId','$sce'];
-
+      ModalAccept['$inject'] = ['$scope', '$modalInstance','trackId','$sce'];
 }]);

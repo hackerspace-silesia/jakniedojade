@@ -10,13 +10,11 @@
 			<img class="center-block" src="img/hand.png" width="110px"/> 
 				
 			</div>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb track-imag" ng-repeat="track in tracks">
-             <img  class="img-responsive " ng-src="{{ track.image_url }}" ng-click="showModalInformation(track)">
-               <div class='VoteBar' >
-                  <img  class=' hand' style='vertical-align:middle float: left;' 
-                         src='img/lapka.png' 
-                         ng-click="showModalAccept(track.name,track.id)">
-                  <span> {{track.vote_count}} </span>
-               </div>
-</div>
+    
+      <track-pictogram ng-controller="TracksController as tracks"> </track-pictogram>
+       <div ng-include="'views/modalForVote.html'"></div>
+
+         <div ng-include="'views/modalWithInformation.html'"></div>
+     
+    
 </div>
