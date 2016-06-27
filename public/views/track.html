@@ -1,0 +1,11 @@
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb track-imag" ng-repeat="track in tracks.dataTrack">
+             <img  class="img-responsive " ng-src="{{track.image_url}}" ng-click="tracks.showModalInformation(track)">
+               <div class='VoteBar' >
+                  <img  class=' hand' style='vertical-align:middle float: left;' 
+                         src='img/lapka.png' 
+                         ng-click="info.showModalAccept(track.name,track.id)">
+                  <span> {{track.vote_count}} </span>
+               </div>
+               </div>
+   
