@@ -4,5 +4,3 @@ Used frameworks:
 -AngularJS,
 -Grunt,
 -Bootstrap.
-
-This version has been created with json-server for fake API.
