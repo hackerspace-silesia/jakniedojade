@@ -13,7 +13,7 @@ angular.module('Tracks')
 				})
   		 .error(function(data, status, headers, config)
   		 		 {
-			      console.log(headers);
+			      alert('Z powodu błędu nie można było załadować piktogramów');
 				});
   		
   	track.getActualTrack=function(){
