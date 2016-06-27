@@ -1,5 +1,0 @@
-app.filter('trusted', ['$app', function ($app) {
-    return function(url) {
-        return $sce.trustAsResourceUrl(url);
-    };
-}]);
