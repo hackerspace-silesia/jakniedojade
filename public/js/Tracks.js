@@ -16,28 +16,7 @@ angular.module('Tracks')
 			      alert('Z powodu błędu nie można było załadować piktogramów');
 				});
 
-	track.sendVote = function(id)
-		{
-		   $http({
-				method: "POST",
-            	url:"/api/"+id, 
-				})
-  		 .success(function(data, status, headers, config) 
-			    {
-			    	return 'Dziękujemy za zagłosowanie';
-				})
-  		 .error(function(data, status, headers, config)
-  		 		 {
-  		 		 		if (status==409)
-						{
-							return 'Niestety nie możesz znowu głosować na tę trasę';	
-						}
-						else
-						{
-							return 'Niestety z powodu błędu nie możesz zagłosować';
-						}
-				}); 
-      	};
+	
 //modals------------------
     track.showModalInformation=function(trackObject)
     {
@@ -97,13 +76,36 @@ angular.module('Tracks')
           $scope.ok = function () 
           {	
           		
-          		$scope.title =track.sendVote;
+          		$scope.title = sendVote(trackId);
               	$scope.showButtons=false;
 
           };
            $scope.cancel = function () {
 		    $modalInstance.dismiss('cancel');
 		  };
+
+		  sendVote = function(id)
+		{
+		   $http({
+				method: "POST",
+            	url:"/api/connections/"+id+"/vote/", 
+				})
+  		 .success(function(data, status, headers, config) 
+			    {
+			    	$scope.title='Dziękujemy za zagłosowanie';
+				})
+  		 .error(function(data, status, headers, config)
+  		 		 {
+  		 		 		if (status==409)
+						{
+							$scope.title= 'Niestety nie możesz znowu głosować na tę trasę';	
+						}
+						else
+						{
+							$scope.title= 'Niestety z powodu błędu nie możesz zagłosować';
+						}
+				}); 
+      	};
 
       };
 
