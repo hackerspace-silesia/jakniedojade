@@ -96,7 +96,7 @@ connect: {
   },
 
    jshint: {
-    all: ['gruntFile.js', 'public/*/*.*']
+    all: ['gruntFile.js', 'public/js/*.*']
   }
 
 });
