@@ -1,0 +1,14 @@
+
+     <script type="text/ng-template" id="modalWithInformation.html" >
+          <div class="modal-header">
+              <h3 class="modal-title">{{actualTrack.name}}</h3>
+          </div>
+          <div class="modal-body">
+                <h5 class="modal-title">{{actualTrack.description}}</h5>
+               <iframe src="{{actualTrack.iframe_url | trusted }}" width=100% height=300px frameborder="0" allowfullscreen=""></iframe>
+          </div>
+          <div class="modal-footer">
+          </div>
+      </script>
+
+     
