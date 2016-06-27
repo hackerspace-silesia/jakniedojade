@@ -3,29 +3,11 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-ng-repeat :
-.track-image.ng-enter,
-.track-image.ng-move {
--webkit-animation: bounceIn 1s;
--moz-animation: bounceIn 1s;
--ms-animation: bounceIn 1s;
-animation: bounceIn 1s;
-}
-.track-image.ng-leave {
--webkit-animation: bounceOut 1s;
--moz-animation: bounceOut 1s;
--ms-animation: bounceOut 1s;
-animation: bounceOut 1s;
-}
-
-
-
-
 
 .img-responsive{ transition: all .2s ease-in-out; }
 .img-responsive:hover { transform: scale(1.01); }
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 .loader {
 	position: fixed;
@@ -36,6 +18,13 @@ body {
 	z-index: 9999;
 	background: url('../img/gears.svg') 50% 50% no-repeat ;
 }
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+
+	max-height:200px;
+	max-width:300px;
+}
+
+
 .container{
 	
 	font-family:Source Sans Pro Black;
@@ -75,7 +64,21 @@ body {
 {
     width: 90%;
     height: 90%;
+ }
+
+.modal-header
+{
+	background: #FFCF40;
+	
+	
+
 }
+.modal-content {
+border-style: solid;;
+border-color:#FFCF40;
+border-width:5px;
+}
+
 .modal-dialog {
 
   max-height: 80%;
