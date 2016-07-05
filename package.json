@@ -1,7 +1,17 @@
 {
-  "name": "jaknie",
-  "private": true,
+  "name": "jakniedojade",
+  "version": "1.0.0",
+  "description": "This is version of the web application \"Jak nie dojade\" easier in expanding than j-query version.",
+  "main": "conf.js",
   "devDependencies": {
+    "grunt-protractor-runner": "^3.2.0",
+    "grunt-protractor-webdriver": "^0.2.5",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma": "^0.13.22",
+    "protractor": "^3.3.0",
     "grunt": "^1.0.1",
     "grunt-concurrent": "^2.3.0",
     "grunt-contrib-connect": "^1.0.2",
@@ -13,6 +23,17 @@
     "grunt-open": "^0.2.3"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+  "install": "node ./node_modules/protractor/bin/webdriver-manager update",
+  "test": "grunt test"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackerspace-silesia/jakniedojade.git"
+  },
+  "author": "noemiko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackerspace-silesia/jakniedojade/issues"
+  },
+  "homepage": "https://github.com/hackerspace-silesia/jakniedojade#readme"
 }

@@ -74,6 +74,23 @@ connect: {
   }
 },
 
+protractor: {
+  options: {
+    keepAlive: true,
+    configFile: "conf.js"
+  },
+  run: {}
+},
+
+protractor_webdriver: {
+        start: {
+            options: {
+                path: 'node_modules/protractor/bin/',
+                command: 'webdriver-manager start'
+            }
+        }
+    },
+
     concurrent: {
    
      serverWithFakeApi: 
@@ -93,6 +110,15 @@ connect: {
         }
 
       },
+        test: 
+         {
+      
+        tasks: ['json_server','protractor','protractor_webdriver'],
+         options: {
+          logConcurrentOutput: true
+        }
+
+      },
   },
 
    jshint: {
@@ -104,6 +130,8 @@ connect: {
  grunt.registerTask('default', ['concurrent:server']);
  grunt.registerTask('start_fake', ['concurrent:serverWithFakeApi']);
  grunt.registerTask('minimalize', ['uglify','cssmin']);
+ grunt.registerTask('test', ['concurrent:test']);
+
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-json-server');
@@ -113,5 +141,7 @@ connect: {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-protractor-runner');
+  grunt.loadNpmTasks('grunt-protractor-webdriver');
 
 };
