@@ -1,10 +1,22 @@
+# jakniedojade
+
 This is version of the web application "Jak nie dojade" easier in expanding than j-query version.
 
-Used frameworks:
+## Used
+
+```
 -AngularJS,
 -Grunt,
--Karma,
--Jasmine,
 -Bootstrap.
+```
 
-This version has been created with json-server for fake API.
+## howto run
+
+```
+npm install
+grunt start_fake
+```
+
+
+
+
