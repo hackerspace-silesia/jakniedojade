@@ -4,9 +4,9 @@ $(document).one("ajaxStop", function() {
   
 function voteListener()
 {
-	$(".VoteBar").on('click', function() 
+	$(".hand").on('click', function() 
 	{
-		var idTrack=$(this).parent().data('id');
+		var idTrack=$(this).parent().parent().data('id');
        	createModalForAcceptVote(idTrack);
 
     });
