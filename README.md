@@ -1,6 +1,6 @@
 # jakniedojade
 
-This is version of the web application "Jak nie dojade" easier in expanding than j-query version.
+This is version of the web application "Jak nie dojade" easier to expanding than j-query version.
 
 ## Used
 
