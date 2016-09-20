@@ -17,7 +17,7 @@ function createModalForAcceptVote(idTrack)
 {
 	 	$("#modalConfirm").modal();
 		var confirmButtons = "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Nie</button>\
-							  <button type='button' id='ConfirmButtom' class='btn btn-primary'>Tak</button>"
+							  <button type='button' id='ConfirmButtom' class='btn btn-warning'>Tak</button>"
 
 		$('.modal-title').html("Czy na pewno chcesz zagłosować na tę trasę?");
 		$('.modal-footer').html(confirmButtons);

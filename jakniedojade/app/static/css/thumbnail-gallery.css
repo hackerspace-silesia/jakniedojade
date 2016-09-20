@@ -9,6 +9,9 @@
 body {
     padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
+.header{
+	margin-left:5%;
+}
 .loader {
 	position: fixed;
 	left: 0px;
@@ -35,13 +38,14 @@ body {
 }
 #infoBlock{
 	  position:relative;
-	  float:left;
+	  float:right;
 	  clear:none;
 	  overflow:hidden;
 }
 #cloudInfo{
 	 position:relative;
 	  z-index:1;
+	width:100%;
 	
 }
 #info{
@@ -49,7 +53,6 @@ body {
 	  position:absolute;
 	  width:80%;
 	  top:20%;
-	  left:5px;
 	  z-index:2;
 	  text-align:center;
 

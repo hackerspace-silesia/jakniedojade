@@ -18,7 +18,7 @@ function getTrackJS(){
                     {
 					$('.loader').hide();
 					createTrackSquareFromJs(data);
-					modalInfoAbout();	
+					modalInfoOnPictogramClick();	
 				    },	
 				error:function( xhr,textStatus,err) 
 				    {
