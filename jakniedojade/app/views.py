@@ -21,9 +21,13 @@ class ConnectionViewSet(ReadOnlyModelViewSet):
     )
     serializer_class = ConnectionSerializer
 
-    @cache_page(60 * 10)
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
+    @cache_page(60)
+    def list(self, *args, **kwargs):
+        return super().list(*args, **kwargs)
+
+    @cache_page(60)
+    def retrevie(self, *args, **kwargs):
+        return super().retrevie(*args, **kwargs)
 
 
 class AddVoteView(APIView):
