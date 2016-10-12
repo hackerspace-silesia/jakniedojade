@@ -7,8 +7,57 @@
 .img-responsive{ transition: all .2s ease-in-out; }
 .img-responsive:hover { transform: scale(1.01); }
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
+.header{
+	margin-left:5%;
+}
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../img/gears.svg') 50% 50% no-repeat ;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+
+	max-height:200px;
+	max-width:300px;
+}
+
+
+.container{
+	
+	font-family:Source Sans Pro Black;
+	 line-height: 36px;
+	 font-size:15px;
+	  font-weight: bold;
+	  color: rgb(20,73,74);
+}
+#infoBlock{
+	  position:relative;
+	  float:right;
+	  clear:none;
+	  overflow:hidden;
+}
+#cloudInfo{
+	 position:relative;
+	  z-index:1;
+	width:100%;
+	
+}
+#info{
+ display:block;
+	  position:absolute;
+	  width:80%;
+	  top:20%;
+	  z-index:2;
+	  text-align:center;
+
+}
+
 
 @media (min-height: 992px)
 .modal-body {
@@ -16,14 +65,28 @@ body {
 }
 .modal
 {
-    width: 900px;
-    height: 900px; /* control height here */
+    width: 90%;
+    height: 90%;
+ }
+
+.modal-header
+{
+	background: #FFCF40;
+	
+	
+
 }
+.modal-content {
+border-style: solid;;
+border-color:#FFCF40;
+border-width:5px;
+}
+
 .modal-dialog {
 
   max-height: 80%;
   overflow-y: auto;
-	height:800px;
+	
 }
 #map{
 	display: block;
@@ -92,9 +155,7 @@ footer {
 	 display:inline-block;
 	 
 }
-#subHeader{
-	font-family:"Sans Pro Black";
-}
+
  #map {
         width: 300px;
         height: 300px;

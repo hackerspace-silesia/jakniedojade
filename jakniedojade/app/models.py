@@ -1,4 +1,5 @@
 from django.db import models
+from django_resized import ResizedImageField
 
 
 class Core(models.Model):
@@ -12,7 +13,7 @@ class Core(models.Model):
 
 class Image(Core):
     name = models.CharField(max_length=80)
-    image = models.ImageField(upload_to='connects', blank=True, null=True)
+    image = ResizedImageField(size=[300, 200], upload_to='connects', blank=True, null=True)
 
     def __str__(self):
         return self.name or '-'
@@ -21,7 +22,7 @@ class Image(Core):
 class Connection(Core):
     name = models.CharField(max_length=80)
     image = models.ForeignKey(Image, blank=True, null=True)
-    iframe_url = models.URLField(blank=True, null=True)
+    iframe_url = models.URLField(blank=True, null=True, max_length=1000)
     description = models.TextField(blank=True)
 
     def __str__(self):
