@@ -4,7 +4,6 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status as http_status
-from django.views.decorators.cache import cache_page
 
 from app.models import Connection, Image, Vote 
 from app.serializers import ConnectionSerializer
@@ -20,14 +19,6 @@ class ConnectionViewSet(ReadOnlyModelViewSet):
         )
     )
     serializer_class = ConnectionSerializer
-
-    @cache_page(60)
-    def list(self, *args, **kwargs):
-        return super().list(*args, **kwargs)
-
-    @cache_page(60)
-    def retrevie(self, *args, **kwargs):
-        return super().retrevie(*args, **kwargs)
 
 
 class AddVoteView(APIView):
