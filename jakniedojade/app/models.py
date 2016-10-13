@@ -33,3 +33,4 @@ class Vote(Core):
     connection = models.ForeignKey(Connection, related_name='votes')
     ip = models.CharField(max_length=45)
     user_agent = models.CharField(max_length=128, blank=True)
+
