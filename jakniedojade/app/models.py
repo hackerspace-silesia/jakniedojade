@@ -18,6 +18,9 @@ class Image(Core):
     def __str__(self):
         return self.name or '-'
 
+    def __unicode__(self):
+        return self.name or u'-'
+
 
 class Connection(Core):
     name = models.CharField(max_length=80)
@@ -27,6 +30,9 @@ class Connection(Core):
 
     def __str__(self):
         return self.name or '-'
+
+    def __unicode__(self):
+        return self.name or u'-'
 
 
 class Vote(Core):
