@@ -38,12 +38,12 @@ function createTrackSquareFromJs(data){
 										data-description='"+value.description+"'> \
 										</div>\
 									</div>";
-							var pictogram="<img class='img-responsive'  src='"+value.image_url+"'/>";
+							var pictogram="<img class='img-responsive pictogram'  src='"+value.image_url+"'/>";
 							var voteBar= "<div class='VoteBar' >\
 										<img  class='hand' style='vertical-align:middle float: left;' src='static/img/lapka.png'>\
 										<span id='"+value.id+"'class='vote'>"+value.vote_count+"</span></div>";
 										
-							$('.main').append(squareWithJsonData);
+							$('.pictograms').append(squareWithJsonData);
 							$("#square"+value.id).append(pictogram);
 							$("#square"+value.id).append(voteBar);
 							});	
@@ -51,7 +51,7 @@ function createTrackSquareFromJs(data){
 };
 
 function modalInfoOnPictogramClick(){
-	 $(".img-responsive").click(function()
+	 $(".pictogram").click(function()
 	 {
         $("#modalInfo").modal();
         $(".modal-title-Info").html($(this).parent().data('name'));
