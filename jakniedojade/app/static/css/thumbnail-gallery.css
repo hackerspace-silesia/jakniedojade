@@ -38,7 +38,7 @@ background-repeat: no-repeat;
 	width:200px;
 }
 .big-hand{
-	    -ms-transform: rotate(90deg); /* IE 9 */
+	-ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
     margin-left: 160px;
@@ -46,8 +46,6 @@ background-repeat: no-repeat;
 }
 
 }
-
-
 
 body {
     padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -109,11 +107,6 @@ body {
 
 }
 
-
-@media (min-height: 992px)
-.modal-body {
-    max-height: 800px;
-}
 .modal
 {
     width: 90%;
@@ -124,8 +117,6 @@ body {
 {
 	background: #FFCF40;
 	
-	
-
 }
 .modal-content {
 border-style: solid;;
