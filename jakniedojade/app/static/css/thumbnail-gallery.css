@@ -5,59 +5,54 @@
 
 
 @media (max-width: 990px) {
- .headerInformation {
-    display: none;
-}
-.mainInformation{
- background-image: url("../img/MaszProblem.png");
-background-repeat: no-repeat;
-      background-position: left top;
-      padding-top:68px;
-      height: 100px;
-}
+	 .headerInformation {
+	    display: none;
+	}
+	.mainInformation{
+	 background-image: url("../img/MaszProblem.png");
+	background-repeat: no-repeat;
+	      background-position: left top;
+	      padding-top:68px;
+	      height: 100px;
+	}
 }
 
 @media (min-width: 550px) {
-.thumbnail>img{
-	margin:0px;
-}
+	.thumbnail>img{
+		margin:0px;
+	}
 
 }
 
 @media (max-width: 550px) {
-.informations{
-	left:10%;
-}
-.page-header{
-	margin:10%;
-}
-.col-xxs-12{
-	width:100%;
-}
-.informations{
-	width:200px;
-}
-.big-hand{
-	-ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
-    margin-left: 160px;
-    margin-top: -80;
-}
-
+	.informations{
+		left:10%;
+	}
+	.page-header{
+		margin:10%;
+	}
+	.col-xxs-12{
+		width:100%;
+	}
+	.informations{
+		width:200px;
+	}
+	.big-hand{
+		-ms-transform: rotate(90deg); /* IE 9 */
+	    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	    transform: rotate(90deg);
+	    margin-left: 160px;
+	    margin-top: -80;
+	}
 }
 
 body {
-    padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    padding-top: 0px; 
 }
-.header{
-	margin-left:5%;
-}
+
 .logo{
 	    padding-right: 20px;
 }
-
-
 
 .loader {
 	position: fixed;
@@ -77,11 +72,11 @@ body {
 
 .container{
 	
-	font-family:Source Sans Pro Black;
-	 line-height: 36px;
+	font-family:Source Sans Pro Black, sans-serif;
+	 line-height: 25px;
 	 font-size:15px;
 	  font-weight: bold;
-	  color: rgb(20,73,74);
+	  color: #000033;
 
 
 }
@@ -109,8 +104,7 @@ body {
 
 .modal
 {
-    width: 90%;
-    height: 90%;
+
  }
 
 .modal-header
@@ -125,8 +119,7 @@ border-width:5px;
 }
 
 .modal-dialog {
-
-  max-height: 80%;
+	margin: 0;
   overflow-y: auto;
 	
 }
@@ -154,6 +147,8 @@ border-width:5px;
 .hand{
     transform: rotate(270deg);
 }
+
+
 
 @media screen and (max-width: 550px) {
    .VoteBar {
@@ -184,9 +179,6 @@ border-width:5px;
 	
 }
 
-footer {
-    margin: 50px 0;
-}
 .hand{
 	width:40px;
 	display: inline-block;
@@ -199,6 +191,6 @@ footer {
 }
 
  #map {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
       }
