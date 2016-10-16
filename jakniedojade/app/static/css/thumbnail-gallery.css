@@ -1,17 +1,66 @@
-/*!
- * Start Bootstrap - Thumbnail Gallery HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
 .img-responsive{ transition: all .2s ease-in-out; }
 .img-responsive:hover { transform: scale(1.01); }
+
+
+
+@media (max-width: 990px) {
+ .headerInformation {
+    display: none;
+}
+.mainInformation{
+ background-image: url("../img/MaszProblem.png");
+background-repeat: no-repeat;
+      background-position: left top;
+      padding-top:68px;
+      height: 100px;
+}
+}
+
+@media (min-width: 550px) {
+.thumbnail>img{
+	margin:0px;
+}
+
+}
+
+@media (max-width: 550px) {
+.informations{
+	left:10%;
+}
+.page-header{
+	margin:10%;
+}
+.col-xxs-12{
+	width:100%;
+}
+.informations{
+	width:200px;
+}
+.big-hand{
+	    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    margin-left: 160px;
+    margin-top: -80;
+}
+
+}
+
+
+
 body {
     padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 .header{
 	margin-left:5%;
 }
+.logo{
+	    padding-right: 20px;
+}
+
+
+
 .loader {
 	position: fixed;
 	left: 0px;
@@ -35,6 +84,8 @@ body {
 	 font-size:15px;
 	  font-weight: bold;
 	  color: rgb(20,73,74);
+
+
 }
 #infoBlock{
 	  position:relative;

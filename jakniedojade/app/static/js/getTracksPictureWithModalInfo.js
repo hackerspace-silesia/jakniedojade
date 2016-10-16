@@ -43,7 +43,7 @@ function createTrackSquareFromJs(data){
 										<img  class='hand' style='vertical-align:middle float: left;' src='static/img/lapka.png'>\
 										<span id='"+value.id+"'class='vote'>"+value.vote_count+"</span></div>";
 										
-							$('.container').append(squareWithJsonData);
+							$('.main').append(squareWithJsonData);
 							$("#square"+value.id).append(pictogram);
 							$("#square"+value.id).append(voteBar);
 							});	

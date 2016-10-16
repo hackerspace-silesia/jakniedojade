@@ -1,28 +1,51 @@
-﻿<html lang="en"><head>
+﻿<html lang="en">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Jak nie dojadę</title>
-
+<head>
+  <meta charset="utf-8">
+  <title>Jak nie dojadę</title>
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/thumbnail-gallery.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="static/js/getTracksPictureWithModalInfo.js"></script>
-     <script src="static/js/sendVoteAndModalAcceptReject.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="static/js/getTracksPictureWithModalInfo.js"></script>
+  <script src="static/js/sendVoteAndModalAcceptReject.js"></script>
 </head>
 
-<body>
+<body class="container">
+  <header class="page-header row">
+      <div class="col-lg-3 col-md-4 col-xs-6 col-xxs-12">
+        <img class="img-responsive logo" src="static/img/logo.png">
+      </div>
+      <div class="col-lg-3 col-md-4">
+           <img class="headerInformation" src="static/img/MaszProblem.png">
+      </div>
+      <div class="col-lg-3 col-md-4 ">
+        
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 col-xxs-12">
+        <a href="http://kodujdlapolski.pl/projects/jakniedojade/" target="_blank">
+          <img src="static/img/dymek.png">
+        </a>
+      </div>
+  </header>
+  <main class='main row'>
+      <div class="col-lg-3 col-md-4 col-xs-12 col-xxs-12 thumb informations ">
+        <div class="mainInformation"></div>
+        <div class="img-responsive">WYBIERZ SWOJĄ TRASĘ,<br>
+          JEŚLI PROBLEM CIĘ <br>
+          DOTYCZY
+        </div>
+        <img class="big-hand" src="static/img/hand.png" width="110px">  
+      </div>
+  </main>
+  <footer>
+
+  </footer>   
 <div class="loader" style="display: none;"></div>
-<!-- Modal -->
+<!-- Modal for Track-->
   <div class="modal fade" id="modalInfo" role="dialog">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header ">
           <button type="button" class="close" data-dismiss="modal">×</button>
@@ -36,10 +59,9 @@
       </div>
     </div>
   </div>
-  <!-- Modal -->
+  <!-- Modal for vote-->
   <div class="modal fade" id="modalConfirm" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
@@ -50,53 +72,5 @@
       </div>
     </div>
   </div>
-    <!-- Navigation -->
-  <div>
-    
-
-    <!-- Page Content -->
-    <div class="container">
-  <div class="row page-header">
-    <div class="col-md-8 col-sm-8 col-xs-8 header">
-      <img src="static/img/logo.png" width="250px">  
-    </div>
-    <a href="http://kodujdlapolski.pl/projects/jakniedojade/" target="_blank"><div id="infoBlock" class="col-md-3">
-    
-      <img id="cloudInfo" src="static/img/dymek.png"> 
-        <div id="info">+ WIĘCEJ O PROJEKCIE</div>
-  
-    </div></a>
-  </div>
-
-  <div class="header" id="subHeader">MASZ PROBLEM <br>
-            Z DOJAZDEM DO WYBRANEGO <br>
-            PUNKTU NA MAPIE <br>
-            WOJEWÓDZTWA ŚLĄSKIEGO ?  </div>
-        <div class="row container" style="top:100px;">
-
-            <div class="col-lg-12">
-                <h1 class="page-header"></h1>
-            </div>
-      <div class="text-center col-lg-3 col-md-4 col-xs-6 thumb">
-      <div>WYBIERZ SWOJĄ TRASĘ,<br>
-        JEŚLI PROBLEM CIĘ <br>
-        DOTYCZY
-      </div>
-      <img class="center-block" src="static/img/hand.png" width="110px"> 
-        
-      </div>
-        </div>
-     
-</div>
-        <!-- Footer -->
-        <footer>
-
-        </footer>
-
-    </div>
-    
-
-
-
-
-</body></html>
+</body>
+</html>
