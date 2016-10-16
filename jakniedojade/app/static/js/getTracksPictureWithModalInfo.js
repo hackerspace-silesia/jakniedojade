@@ -58,10 +58,6 @@ function modalInfoOnPictogramClick(){
         $(".modal-text").html($(this).parent().data('description'));
 		var mapSrc=$(this).parent().data('map');
 		$('#map').attr("src",mapSrc+"&z=10" );
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 20,
-        });
       
     });
 };
