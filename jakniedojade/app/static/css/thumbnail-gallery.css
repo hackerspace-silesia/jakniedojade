@@ -102,10 +102,6 @@ body {
 
 }
 
-.modal
-{
-
- }
 
 .modal-header
 {
@@ -119,7 +115,7 @@ border-width:5px;
 }
 
 .modal-dialog {
-	margin: 0;
+	margin: auto;
   overflow-y: auto;
 	
 }
