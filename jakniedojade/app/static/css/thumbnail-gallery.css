@@ -23,7 +23,7 @@
 		margin-top: 10px;
 	}
 	.container{
-		margin-left: 60px;
+		margin-left: 5%;
 	}
 }
 
@@ -38,9 +38,7 @@
 	.informations{
     	margin-left: 30 !important;
 	}
-	.header{
-		margin-left:0 !important;
-	}
+
 	.big-hand{
 	    margin-left: 20%;
 	}
@@ -51,7 +49,9 @@
 	.informations{
     	margin-left: 60px !important;
 	}
-
+		.header{
+		margin-left:0 !important;
+	}
 }
 
 @media (max-width: 550px) {
