@@ -5,15 +5,25 @@
 
 
 @media (max-width: 990px) {
-	 .headerInformation {
-	    display: none;
+	.header-information {
+	       text-indent: 100%;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  color:transparent;
+	}
+	.mainInformation:before{
+		content: "MASZ PROBLEM Z DOJAZDEM DO\a WYBRANEGO MIEJSCA NA MAPIE\a WOJEWÓDZTWA ŚLĄSKIEGO?";
+
 	}
 	.mainInformation{
-	 background-image: url("../img/MaszProblem.png");
-	background-repeat: no-repeat;
-	      background-position: left top;
-	      padding-top:68px;
-	      height: 100px;
+		width: 250px;
+    	margin-bottom: 30;
+	}
+	.textWithHand{
+		margin-top: 10px;
+	}
+	.container{
+		margin-left: 60px;
 	}
 }
 
@@ -24,25 +34,49 @@
 
 }
 
+@media (max-width: 320px) {
+	.informations{
+    	margin-left: 30 !important;
+	}
+	.header{
+		margin-left:0 !important;
+	}
+	.big-hand{
+	    margin-left: 20%;
+	}
+
+}
+
+@media (max-width: 375px) {
+	.informations{
+    	margin-left: 60px !important;
+	}
+
+}
+
 @media (max-width: 550px) {
 	.informations{
-		left:10%;
+		width:300px !important;
+    	margin-left: 80px ;
 	}
-	.page-header{
+	.header{
 		margin:10%;
 	}
 	.col-xxs-12{
 		width:100%;
 	}
-	.informations{
-		width:200px;
-	}
 	.big-hand{
 		-ms-transform: rotate(90deg); /* IE 9 */
 	    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 	    transform: rotate(90deg);
-	    margin-left: 160px;
+	    margin-left: 190px;
 	    margin-top: -80;
+	}
+	.thumb{
+		padding: 0;
+	}
+		.container{
+		margin-left:0;
 	}
 }
 
@@ -50,8 +84,10 @@ body {
     padding-top: 0px; 
 }
 
-.logo{
-	    padding-right: 20px;
+
+header{
+	margin-bottom: 60;
+	margin-top: 40;
 }
 
 .loader {
@@ -99,7 +135,6 @@ body {
 	  top:20%;
 	  z-index:2;
 	  text-align:center;
-
 }
 
 
@@ -170,10 +205,6 @@ border-width:5px;
 .thumbnail{
 	border:0px;
 }
-.thumb {
-    margin-bottom: 30px;
-	
-}
 
 .hand{
 	width:40px;
@@ -190,3 +221,9 @@ border-width:5px;
         width: 100%;
         height: 100%;
       }
+.img-responsive{
+	padding: 0;
+}
+.mail{
+	margin: 0 auto;
+}
