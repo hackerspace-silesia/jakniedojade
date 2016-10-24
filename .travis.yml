@@ -13,6 +13,6 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin 
 install:
-  - docker-compose build tests
+  - docker-compose pull db
 script:
   - docker-compose run tests
