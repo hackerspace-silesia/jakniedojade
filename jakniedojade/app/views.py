@@ -5,14 +5,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status as http_status
 
-from app.models import Connection, Image, Vote 
-from app.serializers import ConnectionSerializer
+from .models import Connection, Image, Vote
+from .serializers import ConnectionSerializer
 
 
 class ConnectionViewSet(ReadOnlyModelViewSet):
     queryset = (
         Connection.objects
-        .select_related('image__image')
+        .select_related('image')
         .annotate(
             vote_count=Count('votes'),
             image_url=F('image__image'),
@@ -46,7 +46,7 @@ class AddVoteView(APIView):
 
     def delete(self, request, connection_id):
         ip = self.get_client_ip(request)
-        count = Vote.objects.filter(ip=ip, connection_id=connection_id).delete()
+        count = Vote.objects.filter(ip=ip, connection_id=connection_id).delete()[0]
         if count == 0:
             return Response(status=http_status.HTTP_404_NOT_FOUND)
         else:

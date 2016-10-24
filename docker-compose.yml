@@ -5,9 +5,8 @@ db:
     POSTGRES_DB: jakniedojade
     POSTGRES_PASSWORD: general_ania
 
-web:
+webapp:
   build: .
-  command: python manage.py runserver 0.0.0.0:8000
   volumes:
     - ./jakniedojade/:/code/
     - ./static/:/static/
@@ -15,6 +14,15 @@ web:
     - ./html/:/html/
   ports:
     - "8000:8000"
+
+web:
+  extends: webapp
+  command: python manage.py runserver 0.0.0.0:8000
   links:
     - db
 
+tests:
+  extends: webapp
+  command: python manage.py test
+  links:
+    - db

@@ -7,7 +7,7 @@ from django.views.static import serve
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/connections/(?P<connection_id>[0-9]+)/vote', AddVoteView.as_view()),
+    url(r'^api/connections/(?P<connection_id>[0-9]+)/vote', AddVoteView.as_view(), name='add-vote'),
     url(r'^api/', include(router.urls)),
 ]
 
