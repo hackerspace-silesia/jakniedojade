@@ -100,7 +100,7 @@ class Dev(Base):
 class Docker(Base):
     DEBUG = True
     MEDIA_ROOT = '/media'
-    STATIC_ROOT = '/media'
+    STATIC_ROOT = '/static'
     HTML_ROOT = '/html'
     DATABASES = {
         'default': {
