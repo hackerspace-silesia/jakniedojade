@@ -6,6 +6,9 @@ body{
     padding: 0;
 
 }
+.logo{
+    width:240px;
+}
 
 .starter-text{
     width:300px;
@@ -15,50 +18,55 @@ body{
     text-align: center;
 }
 
-
-
 @media (max-width: 990px) {
-
-
-    .container{
-        margin-left: 9%;
-    }
-
     header .header{
-             margin:0 auto;
+        margin:0 auto;
     }
 }
 
 @media (min-width: 550px) {
-    .thumbnail>img{
-        margin:0px;
+    nav{
+     position: fixed;
+     background-color: white;
+     width:100%;
+     z-index: 10;
+     top:0;
+     padding: 10px;
     }
     .introduction{
-    background: url("../img/tlo.svg") ;
-   background-size: 100%;
+        background: url("../img/tlo.svg") ;
+        background-size: 100%;
     }
 
-.introduction{
-    height: 1000px
-}
+    .introduction{
+        height: 1500px
+    }
 
-.first-text{
-    margin-top:200px;
-}
+    .first-text{
+        margin-top:220px;
+    }
 
-.second-text{
-    margin-top:350;
-}
+    .second-text{
+        margin-top:620px;
+    }
 
-
-main{
-    
+    main{
+        top: 70;
         position: relative;
-    z-index: 99;
-}
-.about{
-    align:right;
-}
+        z-index: 5;
+    }
+    .about{
+        padding:30px;
+    }
+
+    .VoteBar{
+       margin-left: 40; 
+    }
+
+    .mail-pictogram{
+        margin-left: 4.5em !important;
+    }
+
 
 }
 
@@ -76,9 +84,6 @@ main{
 }
 
 @media (max-width: 550px) {
-    .mail{
-    margin: 0 auto;
-}
     .textWithHand{
        
        text-align: center;
@@ -97,9 +102,9 @@ main{
         -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
         transform: rotate(90deg);
         margin:0 auto;
-         margin-left: 37%;
-    margin-top: 30;
-    margin-bottom: 40;
+         margin-left: 34%;
+        margin-top: 30;
+        margin-bottom: 40;
     }
     .thumb{
         padding: 0;
@@ -109,7 +114,16 @@ main{
     }
     .logo{
         display: block;
-    margin: 0 auto;
+        margin: 0 auto;
+    }
+
+    .mail-pictogram{
+        position:static !important;
+    }
+
+     .doman-mail{
+       top: 90 !important;
+       margin: 50 !important;
     }
 }
 
@@ -118,11 +132,6 @@ body {
 }
 
 
-header{
-    margin-bottom: 60;
-    margin-top: 40;
-
-}
 
 .loader {
     position: fixed;
@@ -150,25 +159,29 @@ header{
 
 
 }
-#infoBlock{
-      position:relative;
-      float:right;
-      clear:none;
-      overflow:hidden;
+
+.mail
+{
+    position:relative;
 }
-#cloudInfo {
-    position: relative;
-    z-index: 1;
-    width: 100%;
+
+.mail-pictogram
+{    
+    position:absolute;
+    left:0;
+    top:0;
+    margin:0 auto;
 }
-#info {
-    display :block;
-    position :absolute;
-    width :80%;
-    top :20%;
-    z-index :2;
-    text-align: center;
+.doman-mail
+{
+    z-index: 100;
+    position: absolute;
+    font-size: 14;
+    font-weight: bold;
+    top: 35%;
+    margin: 10px;
 }
+
 
 .modal-header {
     background: #FFCF40;
@@ -189,8 +202,7 @@ header{
 }
 
 .modal-dialog {
-    margin: auto;
-    overflow-y: auto;
+margin-top:150px;
 }
 
 #map {
@@ -225,12 +237,6 @@ header{
   }
   .thumb{
       width:100%;
-  }
-}
-
-@media screen and (min-width: 550px) {
-      .VoteBar {
-    padding-left: 70%;
   }
 }
 
