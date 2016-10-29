@@ -1,87 +1,90 @@
 .img-responsive{ transition: all .2s ease-in-out; }
 .img-responsive:hover { transform: scale(1.01); }
 
-@media (max-width: 990px) {
-	.header-information {
-	       text-indent: 100%;
-		  white-space: nowrap;
-		  overflow: hidden;
-		  color:transparent;
-	}
-	.mainInformation:before{
-		content: "MASZ PROBLEM Z DOJAZDEM DO\a WYBRANEGO MIEJSCA NA MAPIE\a WOJEWÓDZTWA ŚLĄSKIEGO?";
+body{
+    margin:0;
+    padding: 0;
+}
 
-	}
-	.mainInformation{
-		width: 250px;
-    	margin-bottom: 30;
-	}
-	.textWithHand{
-		margin-top: 10px;
-	}
-	.container{
-		margin-left: 9%;
-	}
+.starter-text{
+    width:300px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+
+@media (max-width: 990px) {
+
+
+    .container{
+        margin-left: 9%;
+    }
+
+    header .header{
+             margin:0 auto;
+    }
 }
 
 @media (min-width: 550px) {
-	.thumbnail>img{
-		margin:0px;
-	}
+    .thumbnail>img{
+        margin:0px;
+    }
+
 
 }
 
 @media (max-width: 320px) {
-	.informations{
-    	margin-left: 30 !important;
-	}
 
-	.big-hand{
-	    margin-left: 20%;
-	}
-	.logo{
-		margin-left: -20;
-	}
+.informations{
+        margin-left: 0;
+    }
+
 
 }
 
 @media (max-width: 375px) {
-	.informations{
-    	margin-left: 60px;
-	}
+
 }
 
 @media (max-width: 550px) {
-	.mail{
-	margin: 0 auto;
+    .mail{
+    margin: 0 auto;
 }
-	.informations{
-		width:300px !important;
-    	margin-left: 80px ;
-	}
-	.header{
-		margin:10%;
+    .textWithHand{
+       
+       text-align: center;
+    }
+}
+    .about{
+        margin-left: 15%
+    }
 
-	}
-	.logo{
-		padding: 0;
-	}
-	.col-xxs-12{
-		width:100%;
-	}
-	.big-hand{
-		-ms-transform: rotate(90deg); /* IE 9 */
-	    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-	    transform: rotate(90deg);
-	    margin-left: 160px;
-	    margin-top: -80;
-	}
-	.thumb{
-		padding: 0;
-	}
-		.container{
-		margin-left:0;
-	}
+
+    .col-xxs-12{
+        width:100%;
+    }
+    .big-hand{
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+        margin:0 auto;
+         margin-left: 37%;
+    margin-top: 30;
+    margin-bottom: 40;
+    }
+    .thumb{
+        padding: 0;
+    }
+        .container{
+        margin-left:0;
+    }
+    .logo{
+        display: block;
+    margin: 0 auto;
+    }
 }
 
 body {
@@ -90,58 +93,59 @@ body {
 
 
 header{
-	margin-bottom: 60;
-	margin-top: 40;
+    margin-bottom: 60;
+    margin-top: 40;
+
 }
 
 .loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('../img/gears.svg') 50% 50% no-repeat ;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/gears.svg') 50% 50% no-repeat ;
 }
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
 
-	max-height:200px;
-	max-width:300px;
+    max-height:200px;
+    max-width:300px;
 }
 
 
 .container{
-	
-	font-family:Source Sans Pro Black, sans-serif;
-	line-height: 25px;
-	font-size:15px;
-	font-weight: bold;
-	color: #000033;
+    
+    font-family:Source Sans Pro Black, sans-serif;
+    line-height: 25px;
+    font-size:15px;
+    font-weight: bold;
+    color: #000033;
 
 
 }
 #infoBlock{
-	  position:relative;
-	  float:right;
-	  clear:none;
-	  overflow:hidden;
+      position:relative;
+      float:right;
+      clear:none;
+      overflow:hidden;
 }
 #cloudInfo {
-	position: relative;
-	z-index: 1;
-	width: 100%;
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 #info {
     display :block;
-	position :absolute;
-	width :80%;
-	top :20%;
-	z-index :2;
-	text-align: center;
+    position :absolute;
+    width :80%;
+    top :20%;
+    z-index :2;
+    text-align: center;
 }
 
 .modal-header {
-	background: #FFCF40;
+    background: #FFCF40;
     padding: 1px 5px 1px 10px;
 }
 .modal-header > .close {
@@ -159,19 +163,19 @@ header{
 }
 
 .modal-dialog {
-	margin: auto;
+    margin: auto;
     overflow-y: auto;
 }
 
 #map {
-	display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-	margin-top:20px;
+    margin-top:20px;
     border: #5d6581 1px solid;
     border-radius: 5px;
     box-shadow: 0px 0px 5px #5d6581;
-	/*width:900px;*/
+    /*width:900px;*/
     width: 100%;
     height: 100%;
 }
@@ -183,7 +187,7 @@ header{
 }
 .hand:hover{
     animation: kw_anim ease-in-out 0.5s 1;
-	animation-fill-mode: forwards; 
+    animation-fill-mode: forwards; 
 }
 .hand{
     transform: rotate(270deg);
@@ -196,7 +200,7 @@ header{
     padding-left: 40%;
   }
   .thumb{
-	  width:100%;
+      width:100%;
   }
 }
 
@@ -208,25 +212,24 @@ header{
 
 
 .text{ 
-	width:340px;
-	height:217px;
-	background:#FFF; 
-	opacity:0; 
+    width:340px;
+    height:217px;
+    background:#FFF; 
+    opacity:0; 
 }
 .thumbnail{
-	border:0px;
+    border:0px;
 }
 
 .hand{
-	width:40px;
-	display: inline-block;
-	
+    width:40px;
+    display: inline-block;
+    
 }
 
 .underSquare{
-	display:inline-block;	 
+    display:inline-block;    
 }
 .img-responsive{
-	padding: 0;
+    padding: 0;
 }
-

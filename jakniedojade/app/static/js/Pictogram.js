@@ -40,7 +40,7 @@ function createTrackSquareFromJs(data){
 									</div>";
 							var pictogram="<img class='img-responsive pictogram'  src='"+value.image_url+"'/>";
 							var voteBar= "<div class='VoteBar' >\
-										<img  class='hand' style='vertical-align:middle float: left;' src='static/img/lapka.png'>\
+										<img  class='hand' style='vertical-align:middle float: left;' src='static/img/lapka.svg'>\
 										<span id='"+value.id+"'class='vote'>"+value.vote_count+"</span></div>";
 										
 							$('.pictograms').append(squareWithJsonData);
