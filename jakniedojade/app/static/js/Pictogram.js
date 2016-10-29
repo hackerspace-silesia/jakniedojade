@@ -19,6 +19,7 @@ function getTrackJS(){
 					$('.loader').hide();
 					createTrackSquareFromJs(data);
 					modalInfoOnPictogramClick();	
+					onScrollSetSmallerNavigation();
 				    },	
 				error:function( xhr,textStatus,err) 
 				    {
@@ -63,3 +64,19 @@ function modalInfoOnPictogramClick(){
     });
 
 };
+
+function onScrollSetSmallerNavigation(){
+	$(window).scroll(function() {
+		  if ($(document).scrollTop() > 50) {
+		    $('nav').addClass('shrink');
+		    $('.logo').addClass('shrink');
+		    $('.about').addClass('shrink');
+		  } else {
+		    $('nav').removeClass('shrink');
+		    $('.logo').removeClass('shrink');
+		    $('.about').removeClass('shrink');
+		  }
+});
+}
+
+

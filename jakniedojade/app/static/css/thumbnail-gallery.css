@@ -6,8 +6,28 @@ body{
     padding: 0;
 
 }
+
+nav{
+   // Animation
+   -webkit-transition: all 1s ease;
+   transition: all 1s ease;
+}
+
+nav.shrink {
+  height: 70px;
+}
+
 .logo{
     width:240px;
+}
+
+.logo.shrink{
+    height:60px;
+}
+
+
+.about.shrink{ 
+   
 }
 
 .starter-text{
@@ -56,7 +76,7 @@ body{
         z-index: 5;
     }
     .about{
-        padding:30px;
+        margin-left:50px;
     }
 
     .VoteBar{
