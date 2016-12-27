@@ -15,6 +15,7 @@ function voteListener()
 
 function createModalForAcceptVote(idTrack)
 {
+
 	 	$("#modalConfirm").modal();
 		var confirmButtons = "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Nie</button>\
 							  <button type='button' id='ConfirmButtom' class='btn btn-warning'>Tak</button>"
@@ -28,6 +29,7 @@ function createModalForAcceptVote(idTrack)
 		});
 
 };
+
 
 function sendVote(id){
 	  $.ajax({

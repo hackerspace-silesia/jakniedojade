@@ -32,7 +32,7 @@ function getTrackJS(){
 function createTrackSquareFromJs(data){
 	  var json = $.parseJSON(data);
 						 $.each( json, function( index, value){
-							var squareWithJsonData="<div class='col-lg-3 col-md-4 col-xs-6 thumb'>\
+							var squareWithJsonData="<div class='col-lg-3 col-md-4 col-xs-6 col-xxs-12 thumb'>\
 										<div data-id="+value.id+" style='border=0px' class='thumbnail'  id='square"+value.id+"' \
 										data-map='"+value.iframe_url+"' \
 										data-name='"+value.name+"'\
@@ -41,7 +41,7 @@ function createTrackSquareFromJs(data){
 									</div>";
 							var pictogram="<img class='img-responsive pictogram'  src='"+value.image_url+"'/>";
 							var voteBar= "<div class='VoteBar' >\
-										<img  class='hand' style='vertical-align:middle float: left;' src='static/img/lapka.svg'>\
+										<img  class='hand' src='static/img/lapka.svg'>\
 										<span id='"+value.id+"'class='vote'>"+value.vote_count+"</span></div>";
 										
 							$('.pictograms>div:nth-child(1)').after(squareWithJsonData);
