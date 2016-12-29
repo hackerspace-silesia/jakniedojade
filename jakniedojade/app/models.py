@@ -28,6 +28,8 @@ class Connection(Core):
     image = models.ForeignKey(Image, blank=True, null=True)
     iframe_url = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True)
+    connection_time = models.CharField(max_length=100)
+    percent_more_than_2_transfer = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name or '-'

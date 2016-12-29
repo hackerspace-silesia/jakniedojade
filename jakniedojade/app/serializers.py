@@ -15,5 +15,6 @@ class ConnectionSerializer(ModelSerializer):
         model = Connection
         fields = (
             'id', 'image_url', 'name', 'description',
-            'vote_count', 'iframe_url',
+            'vote_count', 'iframe_url', 'connection_time',
+            'connection_time', 'percent_more_than_2_transfer',
         )

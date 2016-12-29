@@ -19,10 +19,10 @@ def image_tag(url):
 class ConnectionAdmin(admin.ModelAdmin):
     list_display = (
         'id', 'name', 'show_image', 'short_description',
-        'last_modified', 'created'
+        'last_modified', 'created','connection_time', 'percent_more_than_2_transfer',
     )
     list_display_links = ('id', 'name')
-    fields = ('name', 'image', 'iframe_url', 'description')
+    fields = ('name', 'image', 'iframe_url', 'description','connection_time', 'percent_more_than_2_transfer')
 
     def short_description(self, obj):
         return truncatechars(obj.description, 50)
