@@ -6,7 +6,7 @@ function voteListener()
 {
 	$(".hand").on('click', function() 
 	{
-		var idTrack=$(this).parent().parent().data('id');
+		var idTrack=$(this).parent().parent().parent().data('id');
        	createModalForAcceptVote(idTrack);
 
     });
