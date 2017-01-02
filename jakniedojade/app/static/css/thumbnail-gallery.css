@@ -8,6 +8,9 @@ nav{
 .thumbnail{
     border:0;
 }
+#map{
+    width:100%;
+}
 
 
 @media (max-width: 520px) {
@@ -38,8 +41,11 @@ nav{
 
 }
 
-.modal-map{
+.modal-map {
     text-align:center;
+    width:100%;
+}
+iframe{
     width:100%;
 }
 
