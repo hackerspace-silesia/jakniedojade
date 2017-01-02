@@ -31,7 +31,7 @@ function getTrackJS(){
 
 function createTrackSquareFromJs(data){
 	  var json = $.parseJSON(data);
-	  console.log(json)
+
 	 $.each( json, function( index, value){
 		var squareWithJsonData="<div class='col-lg-3 col-md-4 col-xs-6 col-xxs-12 thumb'>\
 					<div data-id="+value.id+" style='border=0px' class='thumbnail'  id='square"+value.id+"' \
