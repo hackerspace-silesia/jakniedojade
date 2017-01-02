@@ -9,6 +9,7 @@ nav{
     border:0;
 }
 
+
 @media (max-width: 520px) {
 .col-xxs-12{
     width:100%;
@@ -37,6 +38,10 @@ nav{
 
 }
 
+.modal-map{
+    text-align:center;
+    width:100%;
+}
 
 .modal-header {
     background: #FFCF40;
