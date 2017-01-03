@@ -20,6 +20,7 @@ function getTrackJS(){
 					createTrackSquareFromJs(data);
 					modalInfoOnPictogramClick();	
 					onScrollSetSmallerNavigation();
+					modalEmailOnClick();
 				    },	
 				error:function( xhr,textStatus,err) 
 				    {
@@ -72,6 +73,20 @@ function modalInfoOnPictogramClick(){
 		var mapSrc=$(this).parent().data('map');
 		$('#map').attr("src",mapSrc+"&z=10" );
       
+    });
+
+};
+
+function modalEmailOnClick(){
+	 $(".mail-pictogram").click(function()
+	 {
+	 	$("#modalConfirm").modal();
+		$('.modal-title').html("Prosimy o informacje na poniższego e-maila");
+		$('.modal-footer').html(`<div class="all-copy">
+									<p>marcin.domanski.84@gmail.com</p>
+								 </div>`);
+
+
     });
 
 };
