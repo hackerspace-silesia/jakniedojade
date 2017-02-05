@@ -4,7 +4,9 @@
 nav{
     margin:0;
 }
-
+.thumb {
+    height: 300px;
+}
 .thumbnail{
     border:0;
 }
